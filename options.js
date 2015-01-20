@@ -4,7 +4,7 @@ function saveFolderName() {
     var parentId = "1";
 
     chrome.bookmarks.search({"title": folderName}, function(results) {
-        if (typeof results[0] !== "undefined") { 
+        if (typeof results[0] !== "undefined") {
             saveAndClose(results[0].id, folderName, "Saved");
         }
         else {

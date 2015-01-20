@@ -7,14 +7,14 @@ function onInitial() {
 }
 
 
-function addBookmark(linkInfo) {
-	var title = linkText;
-	var url = linkInfo.linkUrl;
-	chrome.bookmarks.create({
-			"parentId": localStorage["folderId"], 
-			"title": title?title:url,
-			"url": url
-	});
+function addBookmark(info) {
+    var title = linkText;
+    var url = info.linkUrl;
+    chrome.bookmarks.create({
+            "parentId": localStorage["folderId"],
+            "title": title?title:url,
+            "url": url
+    });
 }
 
 
@@ -24,3 +24,6 @@ chrome.runtime.onMessage.addListener(
     linkText = request.linkText;
 });
 chrome.contextMenus.create({title: "Add this link to bookmark", contexts:["link"], onclick: addBookmark});
+chrome.tabs.onActivated.addListener(function(info) {
+    chrome.tabs.executeScript(null, {file: "contentscript.js"});
+});

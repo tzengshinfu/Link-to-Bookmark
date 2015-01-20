@@ -1,21 +1,22 @@
 {
-	"name": "QuicklyBookmark",
-	"description": "Right-click on a link and add it to your Bookmarks folder.",
-	"version": "1.0",
+    "name": "QuicklyBookmark",
+    "description": "Right-click on a link and add it to your Bookmarks folder.",
+    "version": "1.1",
     "options_page": "options.html",
     "minimum_chrome_version": "26",
-	"manifest_version": 2,
-    "permissions": [ "contextMenus", "bookmarks" ],
-	"icons": {
-		"16": "icon_16.png",
-		"48": "icon_48.png",
+    "manifest_version": 2,
+    "permissions": [ "contextMenus", "bookmarks", "tabs", "activeTab", "http://*/*", "https://*/*" ],
+    "icons": {
+        "16": "icon_16.png",
+        "48": "icon_48.png",
         "128": "icon_128.png"
-	},
-	"background": { "scripts" : ["bg.js"] },
+    },
+    "background": { "scripts" : ["bg.js"] },
     "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*" ],
-      "js": ["contentscript.js"]
+      "js": ["contentscript.js"],
+      "run_at": "document_end"
     }
   ]
 }
