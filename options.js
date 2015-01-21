@@ -26,4 +26,6 @@ function saveAndClose(fId, fName, sMessage) {
 
 
 document.getElementById('save').addEventListener('click', saveFolderName);
-document.getElementById("folderId").innerText = localStorage["folderName"];
+
+
+document.getElementById("folderId").innerText = typeof localStorage["folderName"] !== "undefined" ? localStorage["folderName"] : "Not yet set...";

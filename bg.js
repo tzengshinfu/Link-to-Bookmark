@@ -1,34 +1,69 @@
-var linkText;
+var folderIdExisted = typeof localStorage["folderId"] !== "undefined";
+
 
 function onInitial() {
-    if (typeof localStorage["folderId"] === "undefined") {
+    if (folderIdExisted == false) {
         window.open("options.html");
     }
 }
 
 
 function addBookmark(info) {
-    var title = linkText;
-    var url = info.linkUrl;
-    chrome.bookmarks.create({
-            "parentId": localStorage["folderId"],
-            "title": title?title:url,
-            "url": url
-    });
+    if (folderIdExisted == true) {
+        var title = sessionStorage["linkTitle"];
+        var url = info.linkUrl;
+        chrome.bookmarks.create({
+                "parentId": localStorage["folderId"],
+                "title": title != "" ? title : url,
+                "url": url
+        });
+    }
+    else {
+        alert('Not yet set the folder you want to save Bookmarks!');
+    }
 }
 
 
 function addBookmarks(info) {
+    if (folderIdExisted == true) {
+        var selectionLinks = JSON.parse(sessionStorage["selectionLinks"]);
+        var selectionLinksLength = selectionLinks.length;
+        for (linkCnt = 0; linkCnt < selectionLinksLength; linkCnt++) {
+            chrome.bookmarks.create({
+                "parentId": localStorage["folderId"],
+                "title": selectionLinks[linkCnt].linkTitle,
+                "url": selectionLinks[linkCnt].linkUrl
+            });
+        }
+    }
+    else {
+        alert('Not yet set the folder you want to save Bookmarks!');
+    }
 }
 
 
 onInitial();
+
+
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-    linkText = request.linkText;
+    sessionStorage["linkTitle"] = request.linkTitle;
 });
+
+
+chrome.runtime.onConnect.addListener(function(port) {
+    port.onMessage.addListener(function(msg) {
+        sessionStorage["selectionLinks"] = msg;
+  });
+});
+
+
 chrome.contextMenus.create({title: "Add this link to bookmark", contexts:["link"], onclick: addBookmark});
+
+
 chrome.contextMenus.create({title: "Add this link[s] to bookmark", contexts:["selection"], onclick: addBookmarks});
+
+
 chrome.tabs.onActivated.addListener(function(info) {
     chrome.tabs.executeScript(null, {file: "contentscript.js"});
 });
