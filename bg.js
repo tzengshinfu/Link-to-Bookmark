@@ -1,15 +1,12 @@
-var folderIdExisted = typeof localStorage["folderId"] !== "undefined";
-
-
 function onInitial() {
-    if (folderIdExisted == false) {
+    if (isfolderIdExisted() == false) {
         window.open("options.html");
     }
 }
 
 
 function addBookmark(info) {
-    if (folderIdExisted == true) {
+    if (isfolderIdExisted() == true) {
         var title = sessionStorage["linkTitle"];
         var url = info.linkUrl;
         chrome.bookmarks.create({
@@ -25,7 +22,7 @@ function addBookmark(info) {
 
 
 function addBookmarks(info) {
-    if (folderIdExisted == true) {
+    if (isfolderIdExisted() == true) {
         var selectionLinks = JSON.parse(sessionStorage["selectionLinks"]);
         var selectionLinksLength = selectionLinks.length;
         for (linkCnt = 0; linkCnt < selectionLinksLength; linkCnt++) {
@@ -39,6 +36,12 @@ function addBookmarks(info) {
     else {
         alert('Not yet set the folder you want to save Bookmarks!');
     }
+}
+
+
+function isfolderIdExisted() {
+    var folderIdExisted = typeof localStorage["folderId"] !== "undefined";
+    return folderIdExisted;
 }
 
 

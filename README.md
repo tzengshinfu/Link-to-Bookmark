@@ -8,7 +8,8 @@ Usage:
 4. Click "Add this link to bookmark" and enjoy it!  
 
 Updates:  
-Version 2.0:Add feature: Select a range of text including hyperlinks to add to bookmark.  
+Version 2.1:Bug fix: An error message occurs when add links to bookmark.  
+Version 2.0:Add feature: Select a range of text including hyperlinks to bookmark.  
 Version 1.2:Bug fix: Remove trailing and leading space from link's name.  
 Version 1.1:Bug fix: Installing and don't need to refresh the opened tabs to apply this extension.  
 
