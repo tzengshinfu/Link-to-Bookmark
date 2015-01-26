@@ -1,0 +1,35 @@
+{
+  "appName": {
+    "message": "QuicklyBookmark"
+  },
+  "appDesc": {
+    "message": "Right-click on one link(or multiple links) and add it to your Bookmarks folder."
+  },
+  "appTip": {
+    "message": "Please set the folder you want to save Bookmarks first."
+  },
+  "appAlert": {
+    "message": "Not yet set the folder you want to save Bookmarks!"
+  },
+  "appAddAlink": {
+    "message": "Add this link to bookmark"
+  },
+  "appAddLinks": {
+    "message": "Add this link[s] to bookmark"
+  },
+  "appSaved": {
+    "message": "Saved"
+  },
+  "appAdded": {
+    "message": "Added"
+  },
+  "appSaveSuccess": {
+    "message": "Save success! "
+  },
+  "appFolder": {
+    "message": " folder: "
+  },
+  "appNotYet": {
+    "message": "Not yet set..."
+  }
+}

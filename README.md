@@ -8,6 +8,7 @@ Usage:
 4. Click "Add this link to bookmark" and enjoy it!  
 
 Updates:  
+Version 2.2:Add feature: i18N(en, zh_TW, zh_CN).  
 Version 2.1:Bug fix: An error message occurs when add links to bookmark.  
 Version 2.0:Add feature: Select a range of text including hyperlinks to bookmark.  
 Version 1.2:Bug fix: Remove trailing and leading space from link's name.  

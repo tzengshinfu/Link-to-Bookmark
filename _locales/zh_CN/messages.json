@@ -1,0 +1,35 @@
+﻿{
+  "appName": {
+    "message": "QuicklyBookmark"
+  },
+  "appDesc": {
+    "message": "选取一个(或多个)连结，右键按一下就马上新增到你的书签资料夹里。"
+  },
+  "appTip": {
+    "message": "请先输入你想要储存书签的资料夹名称。"
+  },
+  "appAlert": {
+    "message": "尚未设定你想要储存书签的资料夹！"
+  },
+  "appAddAlink": {
+    "message": "将此连结新增为书签"
+  },
+  "appAddLinks": {
+    "message": "将选取范围内所有连结都新增为书签"
+  },
+  "appSaved": {
+    "message": "储存"
+  },
+  "appAdded": {
+    "message": "新增"
+  },
+  "appSaveSuccess": {
+    "message": "设定成功！ "
+  },
+  "appFolder": {
+    "message": " 资料夹： "
+  },
+  "appNotYet": {
+    "message": "尚未设定..."
+  }
+}

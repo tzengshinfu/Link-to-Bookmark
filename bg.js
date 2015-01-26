@@ -16,7 +16,7 @@ function addBookmark(info) {
         });
     }
     else {
-        alert('Not yet set the folder you want to save Bookmarks!');
+        alert(chrome.i18n.getMessage("appAlert"));
     }
 }
 
@@ -34,7 +34,7 @@ function addBookmarks(info) {
         }
     }
     else {
-        alert('Not yet set the folder you want to save Bookmarks!');
+        alert(chrome.i18n.getMessage("appAlert"));
     }
 }
 
@@ -61,10 +61,10 @@ chrome.runtime.onConnect.addListener(function(port) {
 });
 
 
-chrome.contextMenus.create({title: "Add this link to bookmark", contexts:["link"], onclick: addBookmark});
+chrome.contextMenus.create({title: chrome.i18n.getMessage("appAddAlink"), contexts:["link"], onclick: addBookmark});
 
 
-chrome.contextMenus.create({title: "Add this link[s] to bookmark", contexts:["selection"], onclick: addBookmarks});
+chrome.contextMenus.create({title: chrome.i18n.getMessage("appAddLinks"), contexts:["selection"], onclick: addBookmarks});
 
 
 chrome.tabs.onActivated.addListener(function(info) {

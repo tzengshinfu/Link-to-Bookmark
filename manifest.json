@@ -1,7 +1,8 @@
 {
-    "name": "QuicklyBookmark",
-    "description": "Right-click on a link and add it to your Bookmarks folder.",
-    "version": "2.1",
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "version": "2.2",
+    "default_locale": "en",
     "options_page": "options.html",
     "minimum_chrome_version": "26",
     "manifest_version": 2,
