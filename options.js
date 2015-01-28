@@ -1,6 +1,6 @@
 function saveFolderName() {
     var folder_name = document.getElementById('folder_name').value;
-    var folderName = folder_name != "" ? folder_name : "SavedBookmarks";
+    var folderName = folder_name != "" ? folder_name : "Link-to-Bookmark";
     var parentId = "1";
 
     chrome.bookmarks.search({"title": folderName}, function(results) {

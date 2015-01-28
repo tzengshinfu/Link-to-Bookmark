@@ -7,7 +7,8 @@ Usage:
 3. Right-click the link you want to bookmark.  
 4. Click "Add this link to bookmark" and enjoy it!  
 
-Updates:
+Updates:  
+Version 2.4 Bug fix: Fix bookmark added with blank link title.  
 Version 2.3 Bug fix: Fix no bookmark added when link title including single quote/double quote.  
 Version 2.2:Add feature: i18N(zh_TW, zh_CN, en).  
 Version 2.1:Bug fix: An error message occurs when add links to bookmark.  

@@ -44,14 +44,18 @@ function convertToJSON(allLinks) {
                 linkUrl = allLinks[linkCnt].href;
                 if (linkUrl != "") {
                     linkTitle = allLinks[linkCnt].textContent.trim() || allLinks[linkCnt].innerText.trim();
-                    JSONStr += commaStr + "{" + "\"linkTitle\": \"" + encodeURIComponent(linkTitle) + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
+                    if (linkTitle != "") {
+                        JSONStr += commaStr + "{" + "\"linkTitle\": \"" + encodeURIComponent(linkTitle) + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
+                    }
                 }                
                 break;
             case "IMG":
                 linkUrl = allLinks[linkCnt].src;
                 if (linkUrl != "") {
                     linkTitle = allLinks[linkCnt].alt.trim();
-                    JSONStr += commaStr + "{" + "\"linkTitle\": \"" + encodeURIComponent(linkTitle) + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
+                    if (linkTitle != "") {
+                        JSONStr += commaStr + "{" + "\"linkTitle\": \"" + encodeURIComponent(linkTitle) + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
+                    }
                 }                
                 break;
         }
