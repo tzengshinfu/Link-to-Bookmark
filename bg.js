@@ -7,7 +7,7 @@ function onInitial() {
 
 function addBookmark(info) {
     if (isfolderIdExisted() == true) {
-        var title = sessionStorage["linkTitle"];
+        var title = decodeURIComponent(sessionStorage["linkTitle"]);
         var url = info.linkUrl;
         chrome.bookmarks.create({
                 "parentId": localStorage["folderId"],
@@ -28,7 +28,7 @@ function addBookmarks(info) {
         for (linkCnt = 0; linkCnt < selectionLinksLength; linkCnt++) {
             chrome.bookmarks.create({
                 "parentId": localStorage["folderId"],
-                "title": selectionLinks[linkCnt].linkTitle,
+                "title": decodeURIComponent(selectionLinks[linkCnt].linkTitle),
                 "url": selectionLinks[linkCnt].linkUrl
             });
         }

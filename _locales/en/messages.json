@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "QuicklyBookmark"
+    "message": "Link to Bookmark"
   },
   "appDesc": {
     "message": "Right-click on one link(or multiple links) and add it to your Bookmarks folder."
@@ -31,5 +31,11 @@
   },
   "appNotYet": {
     "message": "Not yet set..."
+  },
+  "appBookmarkFolder": {
+    "message": "Now Your Bookmarks folder is:"
+  },
+  "appSavedFolder": {
+    "message": "Input folder name you want to save Bookmarks:"
   }
 }

@@ -1,8 +1,8 @@
 {
     "name": "__MSG_appName__",
     "description": "__MSG_appDesc__",
-    "version": "2.2",
-    "default_locale": "en",
+    "version": "2.3",
+    "default_locale": "zh_TW",
     "options_page": "options.html",
     "minimum_chrome_version": "26",
     "manifest_version": 2,

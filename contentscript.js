@@ -1,7 +1,7 @@
 document.addEventListener('contextmenu', function(evt) {
     getLinkTitle(evt);
     getSelectionLinks(evt);
-}, false);
+}, true);
 
 
 function getSelectionLinks(evt) {
@@ -14,7 +14,7 @@ function getSelectionLinks(evt) {
       var selectionLinks = dfg.querySelectorAll("a, img");
       
       if (selectionLinks.length > 0) {
-          var port = chrome.runtime.connect({name:"QuicklyBookmark"});
+          var port = chrome.runtime.connect({name:"Link to Bookmark"});
           var msg = convertToJSON(selectionLinks);
           port.postMessage(msg);
       }
@@ -23,9 +23,9 @@ function getSelectionLinks(evt) {
 
 
 function getLinkTitle(evt) {
-    var target = evt.target || evt.srcElement;
+    var target = evt.currentTarget.activeElement;
     var linkTitle = target.textContent.trim() || target.innerText.trim() || target.alt.trim() || target.src;
-    chrome.runtime.sendMessage({linkTitle: linkTitle});
+    chrome.runtime.sendMessage({linkTitle: encodeURIComponent(linkTitle)});
 }
 
 
@@ -44,14 +44,14 @@ function convertToJSON(allLinks) {
                 linkUrl = allLinks[linkCnt].href;
                 if (linkUrl != "") {
                     linkTitle = allLinks[linkCnt].textContent.trim() || allLinks[linkCnt].innerText.trim();
-                    JSONStr += commaStr + "{" + "\"linkTitle\": \"" + linkTitle + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
+                    JSONStr += commaStr + "{" + "\"linkTitle\": \"" + encodeURIComponent(linkTitle) + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
                 }                
                 break;
             case "IMG":
                 linkUrl = allLinks[linkCnt].src;
                 if (linkUrl != "") {
                     linkTitle = allLinks[linkCnt].alt.trim();
-                    JSONStr += commaStr + "{" + "\"linkTitle\": \"" + linkTitle + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
+                    JSONStr += commaStr + "{" + "\"linkTitle\": \"" + encodeURIComponent(linkTitle) + "\", " + "\"linkUrl\": \"" + linkUrl + "\"}";
                 }                
                 break;
         }

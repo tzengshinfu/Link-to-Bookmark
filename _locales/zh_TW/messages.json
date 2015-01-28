@@ -1,6 +1,6 @@
 ﻿{
   "appName": {
-    "message": "QuicklyBookmark"
+    "message": "Link to Bookmark"
   },
   "appDesc": {
     "message": "選取一個(或多個)連結，右鍵按一下就馬上新增到你的書籤資料夾裡。"
@@ -31,5 +31,11 @@
   },
   "appNotYet": {
     "message": "尚未設定..."
+  },
+  "appBookmarkFolder": {
+    "message": "儲存書籤存放於："
+  },
+  "appSavedFolder": {
+    "message": "輸入你想要儲存書籤的資料夾名稱："
   }
 }

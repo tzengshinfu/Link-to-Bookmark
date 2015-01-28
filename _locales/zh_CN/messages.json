@@ -1,6 +1,6 @@
 ﻿{
   "appName": {
-    "message": "QuicklyBookmark"
+    "message": "Link to Bookmark"
   },
   "appDesc": {
     "message": "选取一个(或多个)连结，右键按一下就马上新增到你的书签资料夹里。"
@@ -31,5 +31,11 @@
   },
   "appNotYet": {
     "message": "尚未设定..."
+  },
+  "appBookmarkFolder": {
+    "message": "储存书签存放于："
+  },
+  "appSavedFolder": {
+    "message": "输入你想要储存书签的资料夹名称："
   }
 }

@@ -1,6 +1,6 @@
 function saveFolderName() {
     var folder_name = document.getElementById('folder_name').value;
-    var folderName = folder_name != "" ? folder_name : "QuicklyBookmark";
+    var folderName = folder_name != "" ? folder_name : "SavedBookmarks";
     var parentId = "1";
 
     chrome.bookmarks.search({"title": folderName}, function(results) {
@@ -29,3 +29,7 @@ document.getElementById('save').addEventListener('click', saveFolderName);
 
 
 document.getElementById("folderId").innerText = typeof localStorage["folderName"] !== "undefined" ? localStorage["folderName"] : chrome.i18n.getMessage("appNotYet");
+
+document.getElementById("bookmarkFolder").innerText = chrome.i18n.getMessage("appBookmarkFolder");
+
+document.getElementById("savedFolder").innerText = chrome.i18n.getMessage("appSavedFolder");

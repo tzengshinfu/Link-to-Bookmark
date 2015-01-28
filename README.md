@@ -7,8 +7,9 @@ Usage:
 3. Right-click the link you want to bookmark.  
 4. Click "Add this link to bookmark" and enjoy it!  
 
-Updates:  
-Version 2.2:Add feature: i18N(en, zh_TW, zh_CN).  
+Updates:
+Version 2.3 Bug fix: Fix no bookmark added when link title including single quote/double quote.  
+Version 2.2:Add feature: i18N(zh_TW, zh_CN, en).  
 Version 2.1:Bug fix: An error message occurs when add links to bookmark.  
 Version 2.0:Add feature: Select a range of text including hyperlinks to bookmark.  
 Version 1.2:Bug fix: Remove trailing and leading space from link's name.  
@@ -19,4 +20,4 @@ Special thanks to Jack Cai(icon designer, http://www.doublejdesign.co.uk/)
 I download this nice icons from Icon Search Engine(http://findicons.com/search/bookmark)  
 
 You can install this extension from chrome web store  
-(https://chrome.google.com/webstore/detail/quicklybookmark/mhdidjpeopgpmlknlinmkplhbgopjegj/related?hl=zh-TW&gl=TW)  
+(https://chrome.google.com/webstore/detail/link-to-bookmark/mhdidjpeopgpmlknlinmkplhbgopjegj?hl=zh-TW)  
