@@ -3,7 +3,7 @@
     "message": "Link to Bookmark"
   },
   "appDesc": {
-    "message": "選取一個(或多個)連結，右鍵按一下就馬上新增到你的書籤資料夾裡。"
+    "message": "選取一個連結，右鍵按一下就馬上新增到你的書籤資料夾裡。"
   },
   "appTip": {
     "message": "請先輸入你想要儲存書籤的資料夾名稱。"
@@ -13,9 +13,6 @@
   },
   "appAddAlink": {
     "message": "將此連結新增為書籤"
-  },
-  "appAddLinks": {
-    "message": "將選取範圍內所有連結都新增為書籤"
   },
   "appSaved": {
     "message": "儲存"

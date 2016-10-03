@@ -3,7 +3,7 @@
     "message": "Link to Bookmark"
   },
   "appDesc": {
-    "message": "Right-click on one link(or multiple links) and add it to your Bookmarks folder."
+    "message": "Right-click on one link and add it to your Bookmarks folder."
   },
   "appTip": {
     "message": "Please set the folder you want to save Bookmarks first."
@@ -13,9 +13,6 @@
   },
   "appAddAlink": {
     "message": "Add this link to bookmark"
-  },
-  "appAddLinks": {
-    "message": "Add this link[s] to bookmark"
   },
   "appSaved": {
     "message": "Saved"
