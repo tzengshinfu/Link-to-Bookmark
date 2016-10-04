@@ -30,11 +30,6 @@ chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
     sessionStorage["linkTitle"] = request.linkTitle;
 });
-chrome.runtime.onConnect.addListener(function(port) {
-    port.onMessage.addListener(function(msg) {
-        sessionStorage["selectionLinks"] = msg;
-  });
-});
 chrome.contextMenus.create({title: chrome.i18n.getMessage("appAddAlink"), contexts:["link"], onclick: addBookmark});
 chrome.tabs.onActivated.addListener(function(info) {
     chrome.tabs.executeScript(null, {file: "contentscript.js"});
